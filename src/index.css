@@ -59,3 +59,12 @@ svg {
   text-align: center;
   font-size: 1rem;
 }
+
+.game-over-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
