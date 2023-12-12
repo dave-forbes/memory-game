@@ -1,3 +1,8 @@
+:root {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(247, 247, 247);
   margin: 0;
@@ -5,7 +10,7 @@ body {
 
 header {
   height: 10rem;
-  background-color: rgba(128, 128, 128, 0.638);
+  background-color: rgba(119, 129, 139, 0.638);
 }
 
 svg {
@@ -17,20 +22,28 @@ svg {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 3rem;
+  gap: 2rem;
   padding: 2rem;
+  align-items: center;
+  align-content: center;
 }
 
 .country {
   display: grid;
   place-content: center;
-  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(237, 240, 247);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  height: 150px
+}
+
+.country:hover, .country:focus {
+  outline: 2px solid blue;
 }
 
 .country svg { 
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
 .country-title {
