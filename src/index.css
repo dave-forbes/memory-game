@@ -11,6 +11,15 @@ body {
 header {
   height: 10rem;
   background-color: rgba(119, 129, 139, 0.638);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1,h2 {
+  margin: 0;
 }
 
 svg {
