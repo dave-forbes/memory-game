@@ -20,8 +20,8 @@ export default function App() {
 
   function shuffleArray(array) {
     const arrayCopy = [...array];
-    for (let i = arrayCopy.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
+    for (let i = 0; i < array.length; i++) {
+      const j = Math.floor(Math.random() * (array.length - 1));
       [arrayCopy[i], arrayCopy[j]] = [arrayCopy[j], arrayCopy[i]];
     }
     return arrayCopy;
