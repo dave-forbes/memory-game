@@ -2,6 +2,7 @@ import Header from "./Header";
 import FlagContainer from "./FlagContainer";
 import { useState, useRef } from "react";
 import countriesArray from "./countriesArray";
+import GameOver from "./GameOver";
 
 export default function App() {
   const [score, setScore] = useState(0);
@@ -11,7 +12,10 @@ export default function App() {
   const clickedFlags = useRef([]);
 
   function reset() {
-    location.reload();
+    setScore(0);
+    setGameOver(false);
+    setArray(shuffleArray(array));
+    clickedFlags.current = [];
   }
 
   function shuffleArray(array) {
@@ -27,10 +31,7 @@ export default function App() {
     <>
       <Header score={score} />
       {gameOver ? (
-        <div className="game-over-container">
-          <h1>Game Over</h1>
-          <button onClick={() => reset()}>Play Again</button>
-        </div>
+        <GameOver onClick={() => reset()} />
       ) : (
         <FlagContainer
           addToScore={() => setScore(score + 1)}
