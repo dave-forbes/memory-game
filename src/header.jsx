@@ -10,7 +10,7 @@ export default function Header({ score = 0 }) {
   return (
     <header>
       <h1>EU Country Memory Game</h1>
-      <h2>Score - {score} out of 27 </h2>
+      <h2>Score - {score}</h2>
       <h2>High Score - {hiScore} </h2>
     </header>
   );
