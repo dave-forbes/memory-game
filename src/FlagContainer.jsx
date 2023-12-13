@@ -5,7 +5,7 @@ export default function FlagContainer({
   array,
   clickedFlags,
 }) {
-  function handleClick(e) {
+  function handleFlagClick(e) {
     const node = e.target;
     let data = node.getAttribute("data-index")
       ? node.getAttribute("data-index")
@@ -24,7 +24,7 @@ export default function FlagContainer({
       {array.map(({ key, component }) => (
         <div
           className="country"
-          onClick={handleClick}
+          onClick={handleFlagClick}
           key={key}
           data-index={key}
         >
