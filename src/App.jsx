@@ -1,13 +1,13 @@
 import Header from "./Header";
 import FlagContainer from "./FlagContainer";
 import { useState, useRef } from "react";
-import countriesArray from "./countriesArray";
+import FlagArray from "./FlagArray";
 import GameOver from "./GameOver";
 
 export default function App() {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [array, setArray] = useState(countriesArray);
+  const [array, setArray] = useState(FlagArray);
 
   const clickedFlags = useRef([]);
 
