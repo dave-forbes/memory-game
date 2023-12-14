@@ -83,14 +83,20 @@ header svg {
 }
 
 .countries {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1400px) {
+  .countries {
+    margin-top: 5rem;
+  }
 }
 
 .country {
